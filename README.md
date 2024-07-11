@@ -1,33 +1,48 @@
-# NumberGuess
-This is a Python-based number guessing game where the player tries to guess a randomly chosen number between 1 and 200. The player has up to six attempts to guess the correct number. After each guess, the game provides feedback indicating whether the guess is too low, too high, or correct. The game includes an option to play again after each round.
-Modules
-•	random: Used to generate a random number.
-•	time: Used to add delays to improve the user experience.
+This Python-based number guessing game challenges players to guess a randomly chosen number between 1 and 200. The player has up to six attempts to guess the number correctly. Feedback is provided for each guess, indicating whether it is too low, too high, or correct. The game can be replayed multiple times based on the player's choice.
+Modules and Libraries
+•	random: Used to generate a random number between 1 and 200.
+•	time: Used to introduce delays to enhance the user experience.
+Variables
+•	secret_number: A random number between 1 and 200, generated at the start of the game using random.randint(1, 200).
 Functions
 1. welcome()
-Description: Greets the player and explains the game.
+Description: Greets the player and provides instructions for the game.
 Parameters: None
 Returns: None
 Behavior:
 •	Prompts the player to enter their name.
-•	Welcomes the player by name and explains the game rules.
-•	Adds a short delay for a better user experience.
+•	Welcomes the player and explains that they need to guess a number between 1 and 200.
+•	Introduces a brief delay to improve the user experience.
 2. guess_game()
-Description: Manages the core guessing game logic.
+Description: Manages the core logic of the guessing game.
 Parameters: None
 Returns: None
 Behavior:
-•	Sets the number of attempts to 0.
-•	Runs a loop to allow the player up to six guesses.
-•	Prompts the player to enter a guess.
-•	Validates the guess to ensure it is an integer within the range of 1 to 200.
-•	Provides feedback if the guess is too low, too high, or correct.
-•	Informs the player if the number is out of range or not a valid integer.
-•	Tracks the number of attempts.
-•	Congratulates the player if they guess correctly within six attempts.
-•	Reveals the correct number if the player fails to guess it within six attempts.
+•	Initializes the attempts counter to 0.
+•	Runs a loop that allows the player up to six attempts to guess the number.
+•	Prompts the player to enter a guess and validates the input:
+o	If the input is not a valid integer, it prompts the player to enter a valid number.
+o	If the guess is outside the range of 1 to 200, it prompts the player to pick a number within the range.
+•	Provides feedback:
+o	Indicates whether the guess is too low or too high.
+o	If the guess is correct, breaks the loop.
+•	After the loop, checks if the player guessed correctly:
+o	Congratulates the player if they guessed the number within six attempts.
+o	Reveals the secret number if they did not guess correctly.
 Main Loop
-The main loop allows the player to play the game multiple times. After each round, the player is asked if they would like to play again. If the player responds with "yes" or "y", the game restarts.
-
+The main loop of the game allows the player to play multiple rounds. It performs the following actions:
+1.	Sets play_again to "yes".
+2.	While play_again is "yes" or "y":
+o	Calls the welcome() function to greet the player and explain the rules.
+o	Calls the guess_game() function to run the guessing game.
+o	Asks the player if they want to play again.
+o	Reads the player's response and updates play_again.
+How to Play
+1.	Run the program: Execute the Python script to start the game.
+2.	Enter your name: When prompted, input your name.
+3.	Guess the number: Enter your guess when prompted. The game will tell you if your guess is too low, too high, or correct.
+4.	Continue guessing: Keep guessing until you either guess the number correctly or exhaust your six attempts.
+5.	Play again: After the game ends, you will be asked if you want to play again. Enter "yes" or "y" to play again, or any other key to exit.
+Enjoy playing the Number Guessing Game!
 
 
